@@ -1,10 +1,11 @@
+
 const authRoutes = require("./routes/auth.routes");
 const userRoutes = require("./routes/user.routes");
 const organizationRoutes = require("./routes/organization.routes");
 const cors = require("cors");
 const db = require("./config/database");
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 const express = require("express");
 const app = express();
 
@@ -23,4 +24,4 @@ db.query("SELECT 1")
 	})
 	.catch((err) => console.log(`db connection failed. ${err}`));
 
-module.exports = app;
+
