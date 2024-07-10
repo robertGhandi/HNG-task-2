@@ -4,11 +4,11 @@ const organizationRoutes = require("./routes/organization.routes");
 const cors = require("cors");
 const db = require("./config/database");
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const express = require("express");
 const app = express();
 
-app.use(cors())
+app.use(cors());
 app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/api/users", userRoutes);
